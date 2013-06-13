@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
+gem 'dynamic_form', '1.1.4'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -38,9 +37,13 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 group :test, :development do
+  gem 'sqlite3'
   gem 'rspec-rails', '~> 2.11'
 end
 
+group :production do
+  gem 'pg'
+end
 group :test do
   gem 'capybara', '1.1.2'
 end
